@@ -67,7 +67,7 @@ public class LoginController {
 		}
 		
 		
-		return "/inicio/loginsssss";
+		return "/inicio/loginssssswwwww";
 	}
 	
 	@GetMapping("/")
