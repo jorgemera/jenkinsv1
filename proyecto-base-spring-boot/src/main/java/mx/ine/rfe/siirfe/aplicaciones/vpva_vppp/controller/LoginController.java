@@ -52,7 +52,7 @@ public class LoginController {
 	@Autowired
 	private IUsuarioService usuarioService;
 
-	@GetMapping("/loginwwww")
+	@GetMapping("/loginwsssswww")
 	public String login(
 			@RequestParam(value="error", required=false) String error,
 			@RequestParam(value="logout", required = false) String logout,
