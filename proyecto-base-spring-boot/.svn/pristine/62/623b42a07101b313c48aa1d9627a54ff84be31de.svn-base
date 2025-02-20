@@ -1,0 +1,45 @@
+/* CSS Document */
+fieldset {
+	
+	border: 1px solid #aaaaaa;
+}
+
+form input {
+	border-color: #ccc;
+	color: #4b4b4b;
+}
+
+form select {
+	border-color: #ccc;
+	color: #222222;
+	background: #fafafa;
+}
+
+form select:disabled {
+	border-color: #ccc;
+	color: #4b4b4b;
+	background: #e4e4e4;
+}
+/**El color del hover de los elementos del tecto = color de la fuente de .ui-state-default */
+form input:hover,textarea:hover {
+	border-color: #ec13b9;
+}
+
+form input:focus {
+	border-color: #000000;
+	color: #333333;
+}
+
+input[type=text],input[type=password],textarea {
+	background: #fafafa;
+	border-color: #b8b8b8;
+}
+
+input[type=text]:focus,input[type=password]:focus,textarea:focus {
+	background: #e4e4e4;
+	border-color: #000000;
+}
+
+input[type=submit],input[type=button],input[type=reset] {
+	background: #e4e4e4;
+}

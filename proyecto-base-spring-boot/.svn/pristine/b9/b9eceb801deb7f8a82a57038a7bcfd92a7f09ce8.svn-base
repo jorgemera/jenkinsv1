@@ -1,0 +1,34 @@
+/**
+ * FilesPropertiesConfig.java
+ * Fecha de creación: 25 ene. 2023, 10:59:30
+ *
+ * Copyright (c) 2023 Instituto Federal Electoral. Dirección
+ * Ejecutiva del Registro Federal de Electores.
+ * Periférico Sur 239, México, D.F., C.P. 01010.
+ * Todos los derechos reservados.
+ *
+ * Este software es información confidencial, propiedad del
+ * Instituto Federal Electoral. Esta información confidencial
+ * no deberá ser divulgada y solo se podrá utilizar de acuerdo
+ * a los términos que determine el propio Instituto.
+ */
+package mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
+
+/**
+ * Bean donde se agregaran las rutas de los archivos de propiedades 
+ * @author Julio Cesar Betanzos Rivera (julio.betanzos@ine.mx)
+ * @version 1.0
+ * @since SIIRFE 6.7
+ */
+@Configuration
+@PropertySources({
+//	@PropertySource("file:C:\\siirfe\\configuracion\\ldap\\ldap.properties")
+	@PropertySource("file:${app.home.ldap}/ldap.properties")
+})	
+public class FilesPropertiesConfig {
+
+}

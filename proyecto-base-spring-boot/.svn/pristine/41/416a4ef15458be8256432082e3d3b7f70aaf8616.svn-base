@@ -1,0 +1,53 @@
+/**
+ * UsuarioService.java
+ * Fecha de creación: 3 feb. 2023, 15:49:52
+ *
+ * Copyright (c) 2023 Instituto Federal Electoral. Dirección
+ * Ejecutiva del Registro Federal de Electores.
+ * Periférico Sur 239, México, D.F., C.P. 01010.
+ * Todos los derechos reservados.
+ *
+ * Este software es información confidencial, propiedad del
+ * Instituto Federal Electoral. Esta información confidencial
+ * no deberá ser divulgada y solo se podrá utilizar de acuerdo
+ * a los términos que determine el propio Instituto.
+ */
+
+package mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo.service.impl;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo.dao.IUsuarioDao;
+import mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo.model.Usuario;
+import mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo.service.IUsuarioService;
+
+/**
+ * Bean de ejemplo serviceImpl 
+ * @author Julio Cesar Betanzos Rivera (julio.betanzos@ine.mx)
+ * @version 1.0
+ * @since SIIRFE 6.7
+ */
+@Service
+public class UsuarioServiceImpl implements IUsuarioService{
+	
+	private static Logger logger = LoggerFactory.getLogger(UsuarioServiceImpl.class);
+	
+	@Autowired
+	private IUsuarioDao usuarioDao;
+	
+	@Override
+	@Transactional(readOnly = true)
+	public List<Usuario> findAll(){
+		logger.info("Estamos en el service findAll");
+		return (List<Usuario>) usuarioDao.findAll();
+	}
+
+
+
+}

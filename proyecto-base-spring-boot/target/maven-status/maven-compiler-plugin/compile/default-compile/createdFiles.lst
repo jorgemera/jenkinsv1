@@ -1,0 +1,15 @@
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\VpvaVpppApplication.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\controller\LoginController.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\service\impl\UsuarioServiceImpl.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\excepciones\ServiceException.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\config\security\UserDetailsContextMapperImpl.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\excepciones\ErrorCodes.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\config\security\SecurityConfig.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\config\FilesPropertiesConfig.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\config\ExternalPropertyConfigurer.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\model\Usuario.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\service\IUsuarioService.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\dao\IUsuarioDao.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\ServletInitializer.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\config\security\UserDetailsImpl.class
+mx\ine\rfe\siirfe\aplicaciones\vpva_vppp\config\filters\CORSFilter.class

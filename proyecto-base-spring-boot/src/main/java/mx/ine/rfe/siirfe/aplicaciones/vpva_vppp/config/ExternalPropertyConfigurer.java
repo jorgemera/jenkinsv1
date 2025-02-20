@@ -1,0 +1,41 @@
+/**
+ * ExternalPropertyConfigurer.java
+ * Fecha de creación: 25 ene. 2023, 10:59:30
+ *
+ * Copyright (c) 2023 Instituto Federal Electoral. Dirección
+ * Ejecutiva del Registro Federal de Electores.
+ * Periférico Sur 239, México, D.F., C.P. 01010.
+ * Todos los derechos reservados.
+ *
+ * Este software es información confidencial, propiedad del
+ * Instituto Federal Electoral. Esta información confidencial
+ * no deberá ser divulgada y solo se podrá utilizar de acuerdo
+ * a los términos que determine el propio Instituto.
+ */
+
+package mx.ine.rfe.siirfe.aplicaciones.vpva_vppp.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.io.FileSystemResource;
+
+/**
+ * Externalize application.properties 
+ * @author Julio Cesar Betanzos Rivera (julio.betanzos@ine.mx)
+ * @version 1.0
+ * @since SIIRFE 6.7
+ */
+@Profile({ "prod", "qa" })
+@Configuration
+public class ExternalPropertyConfigurer {
+
+	@Bean
+    public PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        PropertySourcesPlaceholderConfigurer properties = new PropertySourcesPlaceholderConfigurer();
+        properties.setLocation(new FileSystemResource("${app.home.properties}\\properties\\application.properties"));
+        properties.setIgnoreResourceNotFound(false);
+        return properties;
+    }
+}

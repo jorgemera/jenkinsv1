@@ -1,0 +1,286 @@
+/**
+ * UserDetailsImpl.java
+ * Fecha de creación: 31 ene. 2023, 19:04:36
+ *
+ * Copyright (c) 2023 Instituto Federal Electoral. Dirección
+ * Ejecutiva del Registro Federal de Electores.
+ * Periférico Sur 239, México, D.F., C.P. 01010.
+ * Todos los derechos reservados.
+ *
+ * Este software es información confidencial, propiedad del
+ * Instituto Federal Electoral. Esta información confidencial
+ * no deberá ser divulgada y solo se podrá utilizar de acuerdo
+ * a los términos que determine el propio Instituto.
+ */
+
+package mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo.config.security;
+
+import java.io.Serializable;
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+
+/**
+ * Detalles del usuario logueado al sistema
+ * @author Julio Cesar Betanzos Rivera (julio.betanzos@ine.mx)
+ * @version 1.0
+ * @since SIIRFE 6.7
+ */
+
+public class UserDetailsImpl extends User implements Serializable {
+
+	 private static final long serialVersionUID = 4867414212324557480L;
+	    
+	    private String nombre;
+	    private String apellidoPaterno;
+	    private String apellidoMaterno;
+	    private String nivel;
+	    private String estado;
+	    private String distrito;
+	    private String correoElectronico;
+	    private String modulo;
+	    private String circunscripcion;
+	    private String descripcion;
+	    private String ip;
+	    private String tokenKey;
+
+	    private String uidNumber;
+
+	    /**
+	     * Contruye un usuario con los atributos requeridos
+	     * @author Julio Cesar Betanzos Rivera (julio.betanzos@ine.mx)
+	     * @param username
+	     * @param password
+	     * @param enabled
+	     * @param accountNonExpired
+	     * @param credentialsNonExpired
+	     * @param accountNonLocked
+	     * @param authorities
+	     */
+	    public UserDetailsImpl(String username, String password, boolean enabled,
+	        boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked,
+	        Collection<? extends GrantedAuthority> authorities) {
+	        super(username, password, enabled, accountNonExpired, credentialsNonExpired,
+	            accountNonLocked, authorities);
+	    }
+	    
+	    /**
+	     * @return el atributo nombre
+	     */
+	    public String getNombre() {
+	        return nombre;
+	    }
+	    
+	    /**
+	     * @param nombre parametro nombre a actualizar
+	     */
+	    public void setNombre(String nombre) {
+	        this.nombre = nombre;
+	    }
+	    
+	    /**
+	     * @return el atributo apellidoPaterno
+	     */
+	    public String getApellidoPaterno() {
+	        return apellidoPaterno;
+	    }
+	    
+	    /**
+	     * @param apellidoPaterno parametro apellidoPaterno a actualizar
+	     */
+	    public void setApellidoPaterno(String apellidoPaterno) {
+	        this.apellidoPaterno = apellidoPaterno;
+	    }
+	    
+	    /**
+	     * @return el atributo apellidoMaterno
+	     */
+	    public String getApellidoMaterno() {
+	        return apellidoMaterno;
+	    }
+	    
+	    /**
+	     * @param apellidoMaterno parametro apellidoMaterno a actualizar
+	     */
+	    public void setApellidoMaterno(String apellidoMaterno) {
+	        this.apellidoMaterno = apellidoMaterno;
+	    }
+	    
+	    /**
+	     * @return el atributo nivel
+	     */
+	    public String getNivel() {
+	        return nivel;
+	    }
+	    
+	    /**
+	     * @param nivel parametro nivel a actualizar
+	     */
+	    public void setNivel(String nivel) {
+	        this.nivel = nivel;
+	    }
+	    
+	    /**
+	     * @return el atributo estado
+	     */
+	    public String getEstado() {
+	        return estado;
+	    }
+	    
+	    /**
+	     * @param estado parametro estado a actualizar
+	     */
+	    public void setEstado(String estado) {
+	        this.estado = estado;
+	    }
+	    
+	    /**
+	     * @return el atributo distrito
+	     */
+	    public String getDistrito() {
+	        return distrito;
+	    }
+	    
+	    /**
+	     * @param distrito parametro distrito a actualizar
+	     */
+	    public void setDistrito(String distrito) {
+	        this.distrito = distrito;
+	    }
+	    
+	    /**
+	     * @return el atributo correoElectronico
+	     */
+	    public String getCorreoElectronico() {
+	        return correoElectronico;
+	    }
+	    
+	    /**
+	     * @param correoElectronico parametro correoElectronico a actualizar
+	     */
+	    public void setCorreoElectronico(String correoElectronico) {
+	        this.correoElectronico = correoElectronico;
+	    }
+	    
+	    /**
+	     * @return el atributo modulo
+	     */
+	    public String getModulo() {
+	        return modulo;
+	    }
+	    
+	    /**
+	     * @param modulo parametro modulo a actualizar
+	     */
+	    public void setModulo(String modulo) {
+	        this.modulo = modulo;
+	    }
+	    
+	    /**
+	     * @return el atributo circunscripcion
+	     */
+	    public String getCircunscripcion() {
+	        return circunscripcion;
+	    }
+	    
+	    /**
+	     * @param circunscripcion parametro circunscripcion a actualizar
+	     */
+	    public void setCircunscripcion(String circunscripcion) {
+	        this.circunscripcion = circunscripcion;
+	    }
+	    
+	    /**
+	     * @return el atributo descripcion
+	     */
+	    public String getDescripcion() {
+	        return descripcion;
+	    }
+	    
+	    /**
+	     * @param descripcion parametro descripcion a actualizar
+	     */
+	    public void setDescripcion(String descripcion) {
+	        this.descripcion = descripcion;
+	    }
+	    
+	    /**
+	     * @return el atributo ip
+	     */
+	    public String getIp() {
+	        return ip;
+	    }
+	    
+	    /**
+	     * @param ip parametro ip a actualizar
+	     */
+	    public void setIp(String ip) {
+	        this.ip = ip;
+	    }
+	    
+	    /**
+	     * @return el atributo tokenKey
+	     */
+	    public String getTokenKey() {
+			return tokenKey;
+		}
+
+	    /**
+	     * @param tokenKey parametro tokenKey a actualizar
+	     */
+		public void setTokenKey(String tokenKey) {
+			this.tokenKey = tokenKey;
+		}
+
+		/**
+		 *
+		 * @return
+		 */
+		public String getUidNumber() {
+			return uidNumber;
+		}
+
+		public void setUidNumber(String uidNumber) {
+			this.uidNumber = uidNumber;
+		}
+
+	    /*
+	     * La documentación de este método se encuentra en la clase o interface que lo declara
+	     * (non-Javadoc)
+	     * @see java.lang.Object#toString()
+	     */
+	    @Override
+	    public String toString() {
+	        StringBuilder builder = new StringBuilder();
+	        builder.append(super.toString());
+	        builder.append("UserDetailsImpl [nombre=");
+	        builder.append(nombre);
+	        builder.append(", apellidoPaterno=");
+	        builder.append(apellidoPaterno);
+	        builder.append(", apellidoMaterno=");
+	        builder.append(apellidoMaterno);
+	        builder.append(", nivel=");
+	        builder.append(nivel);
+	        builder.append(", estado=");
+	        builder.append(estado);
+	        builder.append(", distrito=");
+	        builder.append(distrito);
+	        builder.append(", correoElectronico=");
+	        builder.append(correoElectronico);
+	        builder.append(", modulo=");
+	        builder.append(modulo);
+	        builder.append(", circunscripcion=");
+	        builder.append(circunscripcion);
+	        builder.append(", descripcion=");
+	        builder.append(descripcion);
+	        builder.append(", ip=");
+	        builder.append(ip);
+	        builder.append(", uidNumber=");
+	        builder.append(uidNumber);
+	        builder.append("]");
+	        return builder.toString();
+	    }
+	    
+	    
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/head :: head">
+
+</head>
+<body>
+	
+	<header th:replace="layout/layout :: header"></header>
+	
+	<div th:replace="layout/layout :: main"></div>
+	<br><br>
+	<table>
+	 <caption>Lista usuarios</caption>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Apellido Paterno</th>
+				<th>Apellido Materno</th>
+				<th>Telefono</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="usuario: ${usuarios}">
+				<td th:text="${usuario.usuarioId}"></td>
+				<td th:text="${usuario.nombre}"></td>
+				<td th:text="${usuario.apellidoPaterno}"></td>
+				<td th:text="${usuario.apellidoMaterno}"></td>
+				<td th:text="${usuario.telefono}"></td>
+			</tr>
+		</tbody>
+
+	</table>
+<br><br>
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

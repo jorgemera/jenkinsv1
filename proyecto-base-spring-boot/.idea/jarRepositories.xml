@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central.mirror" />
+      <option name="name" value="Almacen central - Mirror de almacenes globales" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/repository/central.mirror" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="archiva.home" />
+      <option name="name" value="Almacen de productos internos artefactos archiva" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="archiva.artifact" />
+      <option name="name" value="Almacen de productos internos artefactos archiva" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/#artifact/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="productos-snapshots-reingenieria" />
+      <option name="name" value="Almacen de snapshots para productos internos de SIIRFE (Reingenieria)" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/repository/productos-snapshots-reingenieria" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="productos.snapshots" />
+      <option name="name" value="Almacen de snapshots para productos internos" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/repository/productos.snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="terceros" />
+      <option name="name" value="Almacen de liberías de terceros" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/repository/terceros" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss-public-repository-group" />
+      <option name="name" value="JBoss Public Repository Group" />
+      <option name="url" value="https://repository.jboss.org/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="productos-reingenieria" />
+      <option name="name" value="Almacen de productos internos de SIIRFE (Reingenieria)" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/repository/productos-reingenieria" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="productos" />
+      <option name="name" value="Almacen de productos internos" />
+      <option name="url" value="https://archiva.derfe.ine.mx/archiva/repository/productos" />
+    </remote-repository>
+  </component>
+</project>

@@ -1,0 +1,132 @@
+/**
+ * LoginController.java
+ * Fecha de creación: 19 ene. 2023, 17:35:54
+ *
+ * Copyright (c) 2023 Instituto Federal Electoral. Dirección
+ * Ejecutiva del Registro Federal de Electores.
+ * Periférico Sur 239, México, D.F., C.P. 01010.
+ * Todos los derechos reservados.
+ *
+ * Este software es información confidencial, propiedad del
+ * Instituto Federal Electoral. Esta información confidencial
+ * no deberá ser divulgada y solo se podrá utilizar de acuerdo
+ * a los términos que determine el propio Instituto.
+ */
+package mx.ine.rfe.siirfe.aplicaciones.vpva_vppp.controller;
+
+import java.security.Principal;
+import java.util.Collection;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import mx.ine.rfe.siirfe.aplicaciones.vpva_vppp.model.Usuario;
+import mx.ine.rfe.siirfe.aplicaciones.vpva_vppp.service.IUsuarioService;
+
+/**
+ * Controller para el login del aplicativo 
+ * @author Julio Cesar Betanzos Rivera (julio.betanzos@ine.mx)
+ * @version 1.0
+ * @since SIIRFE 6.7
+ */
+@Controller
+public class LoginController {
+	
+	private static Logger logger = LoggerFactory.getLogger(LoginController.class);
+	
+	@Autowired
+	private IUsuarioService usuarioService;
+
+	@GetMapping("/login")
+	public String login(
+			@RequestParam(value="error", required=false) String error,
+			@RequestParam(value="logout", required = false) String logout,
+			Model model, Principal principal, RedirectAttributes flash) {
+
+		if(error != null) {
+			model.addAttribute("error", "error de credenciales !! ");
+		}
+		
+		if(logout != null) {
+			model.addAttribute("success", "Ha cerrado sesión con éxito!");
+		}
+		
+		
+		return "/inicio/login";
+	}
+	
+	@GetMapping("/")
+	public String mostrarHome() {
+		return "inicio/index";
+	}
+	
+	
+	@GetMapping({"/index222ssssssssssssss"})
+	public String index (Model model, Authentication authentication, HttpServletRequest request) {
+		
+		if (authentication != null) {
+
+		}
+		hasRole("ROLE_SIIRFE.GRP.AR.MRE.DDVC.939393.299292.92992");
+		//Se puede validar el rol con esta clase 
+		SecurityContextHolderAwareRequestWrapper securityContext = new SecurityContextHolderAwareRequestWrapper(request, "ROLE_");
+		if (securityContext.isUserInRole("SIIRFE.GRP.AR.MRE.DDVC")) {
+			logger.error("Usando SecurityContextHolderAwareRequestWrapper");
+		}		
+		
+		List<Usuario> usuarios = usuarioService.findAll();
+		model.addAttribute("usuarios", usuarios);
+		return "inicio/index";
+	}
+	
+	@GetMapping(value="/logout")
+	public String closeSession(HttpServletRequest request){
+	    HttpSession session=request.getSession();  
+	    session.invalidate();  
+	    return "redirect:/";
+	}//closeSessione
+
+	private boolean hasRole(String role) {
+		
+		SecurityContext context = SecurityContextHolder.getContext();
+		
+		if (context == null) {
+			return false;
+		}
+		
+		Authentication auth = context.getAuthentication();
+		
+		if (auth == null) {
+			return false;
+		}
+		
+
+		Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
+		for(GrantedAuthority authority : authorities) {
+			
+			logger.error("authority.getAuthority() {}",  authority.getAuthority());
+			
+			if (role.equals(authority.getAuthority())) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+}

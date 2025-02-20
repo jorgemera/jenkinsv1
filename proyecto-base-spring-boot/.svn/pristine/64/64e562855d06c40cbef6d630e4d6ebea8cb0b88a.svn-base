@@ -1,0 +1,71 @@
+package mx.ine.rfe.siirfe.aplicaciones.depuracionduplicadoscorrectivo;
+
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+import org.springframework.beans.BeansException;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication()//exclude = {DataSourceAutoConfiguration.class}
+public class DepuracionDuplicadosCorrectivoApplication {
+	
+	 /**
+     * Or you can copy full implementation from
+     * org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration.EmbeddedTomcat
+     * override only getTomcatWebServer(Tomcat)
+     * and provide TomcatContextCustomizer instead of overriding 'postProcessContext(Context)'
+     */
+//    @Bean
+//    public TomcatServletWebServerFactory tomcatServletWebServerFactory() {
+//        return new TomcatServletWebServerFactory() {
+//
+//            @Override
+//            protected TomcatWebServer getTomcatWebServer(Tomcat tomcat) {
+//                //1 enable naming
+//                tomcat.enableNaming();
+//                return super.getTomcatWebServer(tomcat);
+//            }
+//
+//            @Override
+//            protected void postProcessContext(Context context) {
+//                //2 create resource
+//                ContextResource resource = new ContextResource();
+//                resource.setName("java:/siirfe.aplicaciones.analisis.registral.DS");
+//                resource.setType(DataSource.class.getName());
+//                resource.setProperty("driverClassName", "oracle.jdbc.OracleDriver");
+//                resource.setProperty("url", "jdbc:oracle:thin:@//172.19.57.47:12510/SIIRFEPR");
+//                resource.setProperty("username", "GESTIONAREXT");
+//                resource.setProperty("password","GESTIONAREXT");
+//                resource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
+//                context.getNamingResources().addResource(resource);
+//            }
+//        };
+//        
+//    }
+//    
+//    @Bean(destroyMethod = "")
+//    public DataSource jndiDataSource() throws IllegalArgumentException, NamingException {
+//        JndiObjectFactoryBean bean = new JndiObjectFactoryBean();
+//        bean.setJndiName("java:/siirfe.aplicaciones.analisis.registral.DS");
+//        bean.setProxyInterface(DataSource.class);
+//        bean.setLookupOnStartup(false);
+//        bean.afterPropertiesSet();
+//        return (DataSource) bean.getObject();
+//    }
+//    
+//    @Autowired
+//    private DataSource jndiDataSource;
+	
+
+	public static void main(String[] args) throws BeansException, SQLException, NamingException {
+//		InitialContext initialContext = new InitialContext();
+//	    DataSource datasource = (DataSource) initialContext.lookup("java:/siirfe.aplicaciones.analisis.registral.DS");
+		SpringApplication.run(DepuracionDuplicadosCorrectivoApplication.class, args);
+//		.getBean(DataSource.class)
+//        .getConnection();
+	}
+
+	
+}

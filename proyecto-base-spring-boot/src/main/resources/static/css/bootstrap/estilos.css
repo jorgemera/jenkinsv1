@@ -1,0 +1,31 @@
+.card-header {
+	padding: var(- -bs-card-cap-padding-y) var(- -bs-card-cap-padding-x);
+	margin-bottom: 0;
+	color: #ec13b9;
+	border: 1px solid #b5b5b5;
+    background: #b8b8b8 url(../../temas/siirfe-pink/css/images/ui-bg_inset-soft_80_b8b8b8_1x100.png) 50% 50% repeat-x;
+	border-bottom: var(- -bs-card-border-width) solid
+		var(- -bs-card-border-color);
+}
+
+.submit {
+	border: 1px solid #ef52ca;
+	background: #eb66cc url(../../temas/siirfe-pink/css/images/ui-bg_inset-soft_100_eb66cc_1x100.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #ef52ca #242424;
+}
+
+.card {
+	border: 3px solid #aaaaaa;
+	background: #ebebeb url(../../temas/siirfe-pink/css/images/ui-bg_hexagon_100_ebebeb_12x10.png) 50% 50% repeat;
+	color: #222222;
+}
+.iconINE
+{
+width:60%;
+
+
+}
+body {
+	background: #b8b8b8;
+}

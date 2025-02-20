@@ -1,0 +1,39 @@
+/** fondo empleado para resaltar el menu*/
+#header-bottom { /*background:rgb(74,81,85);*/
+	background: #CDCDD1;
+}
+
+/**Estilos para el <div> que contiene a todas las secciones de la plantilla #page-wrapper*/
+	/**Columna izquierda*/
+#page-wrapper #columna-izquierda {
+	border-color: #d0d0d0;
+}
+
+/**Columna derecha*/
+#page-wrapper  #columna-derecha {
+	border-color: #d0d0d0;
+}
+
+#page-wrapper {
+	background: #fAfAfA;
+}
+
+/**Estilos para personalizar el acordeon y sus botones internos*/
+#accordion-menu-icon span a {
+	background-color: #f3f3f3;
+	border: #ffffff solid 1px;
+}
+
+#accordion-menu-icon span  a span {
+	color: #666;
+}
+
+#accordion-menu-icon span a:hover {
+	background-color: #e4e7ea;
+	border-color: #c3c9ce;
+	color: #333;
+}
+
+#accordion-menu-icon span a:active {
+	border-color: #9d9d9d;
+}

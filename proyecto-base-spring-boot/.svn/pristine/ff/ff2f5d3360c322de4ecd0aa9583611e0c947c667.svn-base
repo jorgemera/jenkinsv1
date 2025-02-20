@@ -1,0 +1,19 @@
+server.servlet.session.timeout=15m
+server.port=8090
+server.servlet.context-path=/depuracion-duplicados-correctivo
+#logging.level.org.springframework.security=DEBUG
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+hi=hi
+app.home.ldap=C:\\siirfe\\configuracion\\ldap
+#se requiere por la sobreescritura de metodos para userdetail personalizado
+spring.main.allow-bean-definition-overriding=true
+#Configuration spring boot
+spring.datasource.url=jdbc:oracle:thin:@//172.19.57.47:12510/SIIRFEPR
+spring.datasource.username=DEPURACIONDUPLICADOS
+spring.datasource.password=DEPURACIONDUPLICADOS
+spring.datasource.initilize=false
+# Datasource configuration jboss
+#spring.datasource.jndi-name=java:/siirfe.aplicaciones.analisis.registral.DS
