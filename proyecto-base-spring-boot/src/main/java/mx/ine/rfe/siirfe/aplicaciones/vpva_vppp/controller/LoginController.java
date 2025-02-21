@@ -76,7 +76,7 @@ public class LoginController {
 	}
 	
 	
-	@GetMapping({"/index222ssssssssssssss"})
+	@GetMapping({"/index222swwwwwwwwwwwwwwwwwwwsssssssssssss"})
 	public String index (Model model, Authentication authentication, HttpServletRequest request) {
 		
 		if (authentication != null) {
